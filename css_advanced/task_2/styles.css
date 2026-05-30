@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. CORE RESET & FONT IMPORT
-   ========================================================================== */
+/* --- Fonts & Core Reset --- */
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
 
 * {
@@ -10,15 +8,13 @@
 }
 
 body {
-    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
-    color: #ffffff;
+    font-family: 'Source Sans Pro', sans-serif;
     background-color: #071629;
+    color: #ffffff;
     -webkit-font-smoothing: antialiased;
 }
 
-/* ==========================================================================
-   2. HEADER & TRANSPARENT NAVIGATION (Logo left, links right)
-   ========================================================================== */
+/* --- Header Layout (Transparent Navigation) --- */
 header {
     position: absolute;
     top: 0;
@@ -32,7 +28,7 @@ header {
     background: transparent;
 }
 
-header .logo {
+header .logo, header div {
     display: flex;
     align-items: center;
     font-weight: 700;
@@ -55,10 +51,8 @@ header nav a {
     text-transform: uppercase;
 }
 
-/* ==========================================================================
-   3. HERO / BANNER SECTION (Dark background + radial gradient)
-   ========================================================================== */
-section.hero, .hero-section, section:first-of-type {
+/* --- Hero Section Layout (Dark Background + Radial Gradient) --- */
+main section:first-of-type, .hero-section, section.hero {
     min-height: 800px;
     height: 100vh;
     display: flex;
@@ -67,8 +61,7 @@ section.hero, .hero-section, section:first-of-type {
     align-items: center;
     text-align: center;
     background: radial-gradient(circle, rgba(7, 22, 41, 0.2) 0%, rgba(7, 22, 41, 0.85) 100%), 
-                url('images/pic_1.jpg') center/cover no-repeat,
-                url('image_30be1e.png') center/cover no-repeat;
+                url('images/pic_1.jpg') center/cover no-repeat;
     padding: 0 20px;
 }
 
@@ -79,7 +72,8 @@ h1 {
     letter-spacing: -2px;
 }
 
-section.hero div, .keywords {
+/* Horizontal Keywords Row */
+main section:first-of-type div, .keywords {
     display: flex;
     justify-content: center;
     gap: 60px;
@@ -89,6 +83,7 @@ section.hero div, .keywords {
     letter-spacing: 2px;
 }
 
+/* Purple Rounded Button */
 button, .btn, .button {
     background-color: #C271FF;
     color: #ffffff;
@@ -102,10 +97,8 @@ button, .btn, .button {
     box-shadow: 0 4px 15px rgba(194, 113, 255, 0.4);
 }
 
-/* ==========================================================================
-   4. PROS SECTION (Learn from the pros)
-   ========================================================================== */
-section.pros, section:nth-of-type(2) {
+/* --- Pros / Instructors Section Layout --- */
+main section:nth-of-type(2), .pros-section, section.pros {
     background-color: #071629;
     padding: 100px 10%;
     text-align: center;
@@ -122,14 +115,16 @@ h2 span, .purple {
     font-weight: 700;
 }
 
-section.pros div.container, section.pros div {
+/* Container for 4 columns */
+main section:nth-of-type(2) div {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-.card, section.pros div div {
+/* Card item elements */
+main section:nth-of-type(2) div div {
     flex: 1;
     min-width: 200px;
     max-width: 250px;
@@ -138,7 +133,8 @@ section.pros div.container, section.pros div {
     align-items: center;
 }
 
-section.pros img {
+/* Circular Profiles Alignment */
+main section:nth-of-type(2) img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
