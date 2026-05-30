@@ -1,11 +1,9 @@
-# CSS Advanced - Header and Banner Styling
+# SmileSchool - Header and Banner Styling
 
-This task focuses on implementing the visual identity of the landing page, specifically the header and the hero section, based on the Figma design specifications.
+This project delivers the high-fidelity implementation of the SmileSchool header and primary hero section based on specified Figma templates.
 
-## Key Design Implementations:
-- **Navigation:** Transparent bar at the top, logo on the left, and 3 bold white links (COURSES, PRICING, LOGIN) on the right.
-- **Hero Section:** Dark background with a radial gradient overlay, centering the "Get schooled" heading.
-- **UI Elements:** Horizontal row of keywords (SMILES, GRIN, LAUGH) and a centered purple rounded "REGISTER FOR FREE" button.
-- **Team Section:** "Learn from the pros" header with purple accents and 4 circular profile images aligned horizontally with bold names and italic descriptions.
-
-![Project Preview](https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80)
+## Implemented Deliverables:
+- **Transparent Navigation:** Implemented at the absolute top layout with a left-aligned vector branding and 3 explicit right-aligned white bold font hyperlinks (COURSES, PRICING, LOGIN).
+- **Hero Masking:** Features an advanced responsive background assembly merged underneath an explicit radial black-gradient treatment focusing the bold "Get schooled" core headline elements.
+- **Horizontal Components:** Formatted inline metadata blocks displaying core tags (SMILES, GRIN, LAUGH) along with a centered purple rounded dynamic call to action.
+- **Instructor Profiles:** Integrated horizontal responsive card elements incorporating exact circular instructor metadata, italic descriptions, and chronological performance tracking.
