@@ -1,0 +1,137 @@
+/* --- Global Reset & Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #ffffff;
+    background-color: #07162c;
+}
+
+/* --- Header / Navigation Bar --- */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background: transparent;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.nav {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+/* --- Hero / Banner Section --- */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Figma-ya uyğun radial gradient və tünd arxa plan şəkli overlay-i */
+    background: radial-gradient(circle, rgba(7,22,44,0.4) 0%, rgba(7,22,44,0.9) 100%), 
+                url('https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 20px 60px 20px;
+}
+
+.hero-title {
+    font-size: 80px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+/* Keywords Horizontal Matrix */
+.keywords-row {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+/* Purple Rounded Button */
+.cta-button {
+    background-color: #9b51e0; /* Figma Purple */
+    color: #ffffff;
+    border: none;
+    padding: 16px 40px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 30px; /* Fully Rounded */
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(155, 81, 224, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #823ec7;
+    transform: translateY(-2px);
+}
+
+/* --- Profiles Section Minimal Basic Setup (Future task placeholder) --- */
+.pros-section {
+    padding: 80px 10%;
+    background-color: #07162c;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.purple-text {
+    color: #9b51e0;
+}
+
+.profiles-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.profile-card {
+    flex: 1;
+    min-width: 200px;
+}
