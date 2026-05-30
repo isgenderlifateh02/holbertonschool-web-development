@@ -1,178 +1,129 @@
-/* --- Google Fonts Import --- */
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+/* Google Fonts - Figma-da Source Sans Pro tələb olunur */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
 
-/* --- Reset --- */
+:root {
+    --white: #ffffff;
+    --purple: #C271FF;
+    --dark-blue: #071629;
+}
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    color: #ffffff;
-    background-color: #07162c;
-    -webkit-font-smoothing: antialiased;
+    background-color: var(--dark-blue);
+    color: var(--white);
 }
 
-/* --- Header / Navigation --- */
-.header {
+/* --- Header Section --- */
+header {
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 8%;
-    background: transparent;
-    z-index: 100;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: #ffffff;
-}
-
-.logo-icon {
-    font-size: 24px;
-}
-
-.logo-text {
-    font-weight: 700;
-    font-size: 20px;
-    letter-spacing: -0.5px;
+    padding: 30px 10%; /* Figma padding */
+    z-index: 10;
 }
 
 .nav {
     display: flex;
-    gap: 40px;
+    gap: 30px;
 }
 
-.nav-link {
-    color: #ffffff;
+.nav a {
+    color: var(--white);
     text-decoration: none;
-    font-weight: 700;
+    font-weight: bold; /* White bold text */
     font-size: 12px;
-    letter-spacing: 0.5px;
 }
 
-/* --- Hero Banner Section --- */
+/* --- Hero Section --- */
 .hero-section {
-    min-height: 850px;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    /* Figma-dakı o möhtəşəm tünd radial maska və arxa plan şəkli */
-    background: radial-gradient(circle, rgba(7, 22, 44, 0.3) 0%, rgba(7, 22, 44, 0.85) 100%), 
-                url('https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center center;
     text-align: center;
-    padding: 150px 20px 80px 20px;
+    /* Sərtdəki şəkil adı: image_30be1e.png */
+    background: radial-gradient(circle, rgba(7, 22, 41, 0) 0%, rgba(7, 22, 41, 0.8) 100%), 
+                url('image_30be1e.png');
+    background-size: cover;
+    background-position: center;
 }
 
-.hero-title {
-    font-size: 120px;
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 25px;
-    letter-spacing: -2px;
+.hero-section h1 {
+    font-size: 100px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.keywords-row {
+.keywords {
     display: flex;
-    justify-content: center;
-    gap: 64px;
+    gap: 50px;
     margin-bottom: 40px;
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 2px;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
-/* Centered Purple Rounded Button */
-.cta-button {
-    background-color: #c271ff;
-    color: #ffffff;
+.btn-purple {
+    background-color: var(--purple);
+    color: var(--white);
     border: none;
-    padding: 16px 44px;
-    font-size: 13px;
-    font-weight: 700;
-    border-radius: 28px;
+    padding: 15px 35px;
+    border-radius: 30px; /* Purple rounded button */
+    font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 20px rgba(194, 113, 255, 0.4);
 }
 
-/* --- Section 2: Pros & Profiles --- */
+/* --- Pros Section --- */
 .pros-section {
-    background-color: #07162c;
-    padding: 100px 8%;
+    padding: 70px 10%;
     text-align: center;
 }
 
-.section-subtitle {
+.pros-section h2 {
     font-size: 32px;
-    font-weight: 400;
-    margin-bottom: 80px;
-    letter-spacing: 0.5px;
+    margin-bottom: 60px;
+    font-weight: 300;
 }
 
-.purple-text {
-    color: #c271ff;
+.pros-section h2 span {
+    color: var(--purple); /* Learn in purple */
 }
 
-.profiles-container {
+.profiles {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 40px;
+    gap: 20px;
 }
 
 .profile-card {
     flex: 1;
-    min-width: 220px;
-    max-width: 260px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-/* Circular Profile Images */
-.avatar-container {
+.profile-card img {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 25px;
-}
-
-.profile-img {
-    width: 100%;
-    height: 100%;
+    border-radius: 50%; /* Circular images */
     object-fit: cover;
+    margin-bottom: 20px;
 }
 
-.profile-name {
-    font-size: 20px;
-    font-weight: 700;
+.profile-card h3 {
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
-.profile-desc {
-    font-style: italic; /* Italic description below name */
-    font-size: 15px;
-    color: #ffffff;
+.profile-card p {
+    font-style: italic; /* Italic descriptions */
+    font-size: 14px;
     opacity: 0.8;
-    margin-bottom: 5px;
-}
-
-.profile-year {
-    font-size: 13px;
-    opacity: 0.6;
 }
