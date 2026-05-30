@@ -1,162 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: #071629; color: #ffffff; font-family: sans-serif; }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+header { position: absolute; top: 0; width: 100%; display: flex; justify-content: space-between; padding: 30px 10%; }
+header nav ul { display: flex; list-style: none; gap: 40px; }
+header nav a { color: #ffffff; text-decoration: none; font-weight: 700; font-size: 12px; }
 
-body {
-    font-family: 'Source Sans Pro', sans-serif;
-    background-color: #071629;
-    color: #ffffff;
-    -webkit-font-smoothing: antialiased;
+section.hero { 
+    height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+    background: radial-gradient(circle, rgba(7, 22, 41, 0.2), #071629), url('images/pic_1.jpg') center/cover;
 }
+section.hero h1 { font-size: 120px; margin-bottom: 20px; }
+.keywords { display: flex; gap: 60px; font-weight: 700; margin-bottom: 40px; }
+button { background: #C271FF; color: #ffffff; border: none; border-radius: 30px; padding: 15px 40px; font-weight: 700; cursor: pointer; }
 
-/* Header & Transparent Navigation Bar styling */
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 35px 10%;
-    z-index: 100;
-    background: transparent;
-}
-
-header .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 700;
-    font-size: 20px;
-    text-transform: uppercase;
-}
-
-header .logo-icon {
-    font-size: 22px;
-}
-
-header nav {
-    display: flex;
-    gap: 40px;
-}
-
-header nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
-/* Hero Section / Banner with Radial Gradient Overlay */
-section.hero {
-    min-height: 800px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: radial-gradient(circle, rgba(7, 22, 41, 0.2) 0%, rgba(7, 22, 41, 0.85) 100%), 
-                url('https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-    padding: 0 20px;
-}
-
-h1 {
-    font-size: 120px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    letter-spacing: -2px;
-}
-
-/* Keywords layout */
-.keywords {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    margin-bottom: 40px;
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 2px;
-}
-
-/* Purple Rounded Button */
-.btn {
-    background-color: #C271FF;
-    color: #ffffff;
-    border: none;
-    padding: 16px 44px;
-    font-size: 13px;
-    font-weight: 700;
-    border-radius: 28px;
-    cursor: pointer;
-    text-transform: uppercase;
-    box-shadow: 0 4px 15px rgba(194, 113, 255, 0.4);
-}
-
-/* Pros / Profiles Section Setup */
-section.pros {
-    background-color: #071629;
-    padding: 100px 10%;
-    text-align: center;
-}
-
-h2 {
-    font-size: 36px;
-    font-weight: 400;
-    margin-bottom: 80px;
-}
-
-h2 .purple {
-    color: #C271FF;
-    font-weight: 700;
-}
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.card {
-    flex: 1;
-    min-width: 200px;
-    max-width: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* 4 circular profile images */
-.card img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 25px;
-}
-
-.card h3 {
-    font-weight: 700;
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-
-.card p {
-    font-style: italic;
-    font-size: 15px;
-    opacity: 0.8;
-    margin-bottom: 5px;
-}
-
-.card span {
-    font-size: 13px;
-    opacity: 0.5;
-}
+section.pros { padding: 100px 10%; text-align: center; }
+section.pros h2 { margin-bottom: 80px; }
+section.pros h2 span { color: #C271FF; }
+.container { display: flex; justify-content: center; gap: 30px; }
+.card { width: 200px; display: flex; flex-direction: column; align-items: center; }
+.card img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; }
