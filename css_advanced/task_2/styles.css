@@ -5,12 +5,12 @@
 }
 
 body {
-    background-color: #071629;
-    color: #ffffff;
     font-family: 'Source Sans Pro', sans-serif;
+    color: #ffffff;
+    background-color: #071629;
 }
 
-.header {
+header {
     position: absolute;
     top: 0;
     left: 0;
@@ -20,67 +20,64 @@ body {
     align-items: center;
     padding: 28px 168px;
     z-index: 10;
-    background: transparent;
 }
 
-.logo {
+header .logo {
     display: flex;
     align-items: center;
     gap: 13px;
 }
 
-.logo-icon {
+header .logo-icon {
     width: 35px;
     height: 35px;
 }
 
-.logo-text {
+header .logo-text {
     color: #ffffff;
     font-weight: 700;
     font-size: 16px;
 }
 
-.nav {
+header nav {
     display: flex;
     gap: 41px;
 }
 
-.nav-link {
+header nav a {
     color: #ffffff;
     text-decoration: none;
     font-weight: 700;
     font-size: 12px;
-    letter-spacing: 0.04em;
 }
 
-.hero-section {
+section.hero-section {
     position: relative;
+    min-height: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    background: url('images/pic_1.jpg') center top / cover no-repeat;
-    padding: 200px 168px 100px;
+    padding-top: 250px;
+    padding-bottom: 100px;
+    background-image: url('../images/pic_1.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.hero-section::before {
+section.hero-section::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        180deg,
-        rgba(7, 22, 41, 0.1) 0%,
-        rgba(7, 22, 41, 0.5) 40%,
-        rgba(7, 22, 41, 0.85) 70%,
-        #071629 100%
-    );
+    background: radial-gradient(ellipse at center, rgba(7,22,41,0.4) 0%, rgba(7,22,41,0.9) 100%);
     z-index: 0;
 }
 
-.hero-section > * {
+section.hero-section > * {
     position: relative;
     z-index: 1;
 }
@@ -97,46 +94,46 @@ body {
     gap: 50px;
     font-weight: 700;
     font-size: 14px;
-    letter-spacing: 0.04em;
-    margin-bottom: 35px;
+    letter-spacing: 0.08em;
+    margin-bottom: 40px;
 }
 
 .cta-button {
-    width: 162px;
-    height: 44px;
     background: #c271ff;
     color: #ffffff;
     border: none;
-    border-radius: 22px;
+    border-radius: 30px;
+    padding: 12px 30px;
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
-    letter-spacing: 0.04em;
-    margin-bottom: 150px;
+    margin-bottom: 160px;
 }
 
 .section-subtitle {
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 60px;
 }
 
-.purple-text {
+.section-subtitle span {
     color: #c271ff;
     font-style: italic;
+    font-weight: 700;
 }
 
 .profiles-container {
     display: flex;
     justify-content: center;
     gap: 80px;
+    padding-bottom: 60px;
 }
 
 .profile-card {
-    width: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 150px;
 }
 
 .profile-img {
@@ -144,17 +141,19 @@ body {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .profile-name {
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .profile-desc {
     font-size: 14px;
     font-style: italic;
     color: #c271ff;
+    text-align: center;
 }
