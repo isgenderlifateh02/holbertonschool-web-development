@@ -55,14 +55,13 @@ body {
 
 .hero-section {
     position: relative;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     background: url('images/pic_1.jpg') center top / cover no-repeat;
-    padding-bottom: 120px;
+    padding: 250px 10% 100px;
 }
 
 .hero-section::before {
@@ -75,7 +74,7 @@ body {
     background: linear-gradient(
         180deg,
         rgba(7, 22, 41, 0.3) 0%,
-        rgba(7, 22, 41, 0.6) 60%,
+        rgba(7, 22, 41, 0.7) 70%,
         #071629 100%
     );
     z-index: 0;
@@ -91,7 +90,6 @@ body {
     font-weight: 700;
     line-height: 1;
     margin-bottom: 20px;
-    margin-top: 80px;
 }
 
 .keywords-row {
@@ -114,12 +112,6 @@ body {
     cursor: pointer;
     letter-spacing: 0.04em;
     margin-bottom: 80px;
-}
-
-.pros-section {
-    padding: 60px 10% 100px;
-    text-align: center;
-    background: transparent;
 }
 
 .section-subtitle {
