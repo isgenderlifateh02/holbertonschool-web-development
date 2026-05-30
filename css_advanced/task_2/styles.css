@@ -1,11 +1,7 @@
-/* Google Fonts - Figma-da Source Sans Pro tələb olunur */
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
-
-:root {
-    --white: #ffffff;
-    --purple: #C271FF;
-    --dark-blue: #071629;
-}
+/* ==========================================================================
+   1. CORE RESET & FONT IMPORT
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
 
 * {
     margin: 0;
@@ -14,116 +10,156 @@
 }
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    background-color: var(--dark-blue);
-    color: var(--white);
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+    color: #ffffff;
+    background-color: #071629;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* --- Header Section --- */
+/* ==========================================================================
+   2. HEADER & TRANSPARENT NAVIGATION (Logo left, links right)
+   ========================================================================== */
 header {
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%; /* Figma padding */
-    z-index: 10;
+    padding: 30px 10%;
+    z-index: 100;
+    background: transparent;
 }
 
-.nav {
+header .logo {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
 }
 
-.nav a {
-    color: var(--white);
+header nav {
+    display: flex;
+    gap: 40px;
+}
+
+header nav a {
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold; /* White bold text */
+    font-weight: 700;
     font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
-/* --- Hero Section --- */
-.hero-section {
+/* ==========================================================================
+   3. HERO / BANNER SECTION (Dark background + radial gradient)
+   ========================================================================== */
+section.hero, .hero-section, section:first-of-type {
+    min-height: 800px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* Sərtdəki şəkil adı: image_30be1e.png */
-    background: radial-gradient(circle, rgba(7, 22, 41, 0) 0%, rgba(7, 22, 41, 0.8) 100%), 
-                url('image_30be1e.png');
-    background-size: cover;
-    background-position: center;
+    background: radial-gradient(circle, rgba(7, 22, 41, 0.2) 0%, rgba(7, 22, 41, 0.85) 100%), 
+                url('images/pic_1.jpg') center/cover no-repeat,
+                url('image_30be1e.png') center/cover no-repeat;
+    padding: 0 20px;
 }
 
-.hero-section h1 {
-    font-size: 100px;
-    font-weight: bold;
+h1 {
+    font-size: 120px;
+    font-weight: 700;
     margin-bottom: 20px;
+    letter-spacing: -2px;
 }
 
-.keywords {
+section.hero div, .keywords {
     display: flex;
-    gap: 50px;
+    justify-content: center;
+    gap: 60px;
     margin-bottom: 40px;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
 }
 
-.btn-purple {
-    background-color: var(--purple);
-    color: var(--white);
+button, .btn, .button {
+    background-color: #C271FF;
+    color: #ffffff;
     border: none;
-    padding: 15px 35px;
-    border-radius: 30px; /* Purple rounded button */
-    font-weight: bold;
+    padding: 16px 44px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 28px;
     cursor: pointer;
     text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(194, 113, 255, 0.4);
 }
 
-/* --- Pros Section --- */
-.pros-section {
-    padding: 70px 10%;
+/* ==========================================================================
+   4. PROS SECTION (Learn from the pros)
+   ========================================================================== */
+section.pros, section:nth-of-type(2) {
+    background-color: #071629;
+    padding: 100px 10%;
     text-align: center;
 }
 
-.pros-section h2 {
-    font-size: 32px;
-    margin-bottom: 60px;
-    font-weight: 300;
+h2 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 80px;
 }
 
-.pros-section h2 span {
-    color: var(--purple); /* Learn in purple */
+h2 span, .purple {
+    color: #C271FF;
+    font-weight: 700;
 }
 
-.profiles {
+section.pros div.container, section.pros div {
     display: flex;
     justify-content: space-around;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
-.profile-card {
+.card, section.pros div div {
     flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.profile-card img {
+section.pros img {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Circular images */
+    border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
-.profile-card h3 {
-    font-weight: bold;
-    margin-bottom: 10px;
+h3 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 8px;
 }
 
-.profile-card p {
-    font-style: italic; /* Italic descriptions */
-    font-size: 14px;
+p {
+    font-style: italic;
+    font-size: 15px;
     opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+span {
+    font-size: 13px;
+    opacity: 0.5;
 }
